@@ -1,5 +1,4 @@
-Tested on Chrome browser.  Uses HTML5 audio.
-HOSTED http://metronome-app.herokuapp.com
+# Metronome app
 
 This is music practice software geared towards the piano.  At the heart of it is a specialized metronome tied to a piece of piano music.  The piece is modeled as a series of measures each of which contain beats.  A beat is modeled as two numbers: the amount of evenly-spaced notes for the right hand, and same for left.
 
@@ -8,3 +7,26 @@ This  metronome is designed to help a piano student practice tricky Chopin-style
 
 The user can have many pieces, and there can be many users.  A piece belongs to only one user.  There is a distinct log per piece (with timestamped entries), as well as a distinct metronome-setting per piece.
 
+## Setup
+Prerequesites:
+* Bundler
+* Mongoid
+
+```
+# Create sample user
+rake db:seed
+# Make sure mongodb actually runs
+mongod
+# Start server
+rails s
+```
+User: `admin@example.com`
+
+Password: `password`
+
+## Testing
+This app uses [jasminerice](https://github.com/bradphelan/jasminerice) for testing. To run specs, launch server and go to [http://0.0.0.0:3000/jasmine](http://0.0.0.0:3000/jasmine)
+
+## Deploy
+### Heroku
+Deploying on heroku requires [mongolab addon](https://elements.heroku.com/addons/mongolab). It's free, but requires a verified credit card attached to account.
