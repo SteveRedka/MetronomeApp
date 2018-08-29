@@ -48,4 +48,4 @@ gem 'rails-backbone'
 #####################################################
 ### uncomment for Heroku:
 gem 'unicorn'  ### HEROKU
-ruby '2.0.0'   ### HEROKU
+ruby '2.3.7'   ### HEROKU
